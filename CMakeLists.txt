@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
-
-project(main VERSION 1.0 LANGUAGES CXX)
+project(main)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(SOURCES scr/main.cpp)
+set(SOURCES src/main.cpp)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
-target_link_libraries(WagonyGame PRIVATE Threads::Threads)
+target_link_libraries(main PRIVATE Threads::Threads)
